@@ -17,23 +17,22 @@ fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
     var item2 = list2
 
     while (item1 != null && item2 != null) {
-        if (item1.`val` < item2.`val`) {
-            if (nextItem == null) {
-                nextItem = item1
-            } else {
-                nextItem.next = item1
-                nextItem = nextItem.next
-            }
+        val tempItem = if (item1.`val` < item2.`val`) {
+            val temp = item1
             item1 = item1.next
+            temp
         } else {
-            if (nextItem == null) {
-                nextItem = item2
-            } else {
-                nextItem.next = item2
-                nextItem = nextItem.next
-            }
+            val temp = item2
             item2 = item2.next
+            temp
         }
+
+        nextItem = if (nextItem == null) {
+            tempItem
+        } else {
+            nextItem.apply { next = tempItem }.next
+        }
+
         if (head == null) head = nextItem
     }
 
