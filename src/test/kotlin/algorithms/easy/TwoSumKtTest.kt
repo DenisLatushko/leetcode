@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 @RunWith(Parameterized::class)
-class TwoSumTest(
+class TwoSumKtTest (
     private val givenNums: List<Int>,
     private val givenTarget: Int,
     private val expectedPositions: List<Int>
