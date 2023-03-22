@@ -45,7 +45,9 @@ class MergeTwoSortedListsKtTest(
         }
 
         @JvmStatic
-        @Parameterized.Parameters
+        @Parameterized.Parameters(
+            name = "Given nodes {0} and {1} when call function then result list is {2}"
+        )
         fun data() = listOf(
             arrayOf(getNodeList(list1), getNodeList(list2), getNodeList(list3)),
             arrayOf(null, getNodeList(list2), getNodeList(list2)),
