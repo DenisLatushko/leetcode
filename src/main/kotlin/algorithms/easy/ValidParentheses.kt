@@ -2,26 +2,20 @@ package algorithms.easy
 
 import java.util.*
 
-private val CLOSING_BRACKETS = arrayOf(')', '}', ']')
-private val OPEN_BRACKETS = arrayOf('(', '{', '[')
+private val BRACKETS = mapOf(')' to '(', '}' to '{', ']' to '[')
 
 /** Description: https://leetcode.com/problems/valid-parentheses/ **/
 
 fun isValid(s: String): Boolean {
     val itemList = Stack<Char>()
-
     for (i in 0..s.lastIndex) {
-        val closingBracketIndex = CLOSING_BRACKETS.indexOf(s[i])
-        if (closingBracketIndex >= 0) {
-            if (itemList.isNotEmpty() && itemList.peek() == OPEN_BRACKETS[closingBracketIndex]) {
-                itemList.pop()
-            } else {
+        if (BRACKETS.containsKey(s[i])) {
+            if (itemList.isEmpty() || itemList.pop() != BRACKETS[s[i]]) {
                 return false
             }
         } else {
-            itemList.add(s[i])
+            itemList.push(s[i])
         }
     }
-
     return itemList.isEmpty()
 }
