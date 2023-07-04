@@ -7,30 +7,25 @@ import org.junit.runners.Parameterized
 
 @RunWith(Parameterized::class)
 class RemoveDuplicatesFromSortedArrayKtTest(
-    private val numbers: List<Int>,
-    private val expectedNumbers: List<Int>,
+    private val numbers: IntArray,
+    private val expectedNumbers: IntArray,
     private val expectedNumbersSize: Int
 ) {
 
-    @Test
-    fun `given numbers when call function them final numbers with expected size`() {
-        val numbersArray = numbers.toIntArray()
-        val expectedArray = expectedNumbers.toIntArray()
+    private val numbersTest = numbers.copyOf()
 
-        val resultSize = removeDuplicates(numbersArray)
+    @Test
+    fun `given numbers when call function then return final number`() {
+        val resultSize = removeDuplicates(numbersTest)
 
         assertEquals(expectedNumbersSize, resultSize)
-        assertResultItems(numbersArray, expectedArray, resultSize)
     }
 
-    private fun assertResultItems(
-        numbers: IntArray,
-        expectedArray: IntArray,
-        arraySize: Int
-    ) {
-        for (ind in 0 until arraySize) {
-            assertEquals(expectedArray[ind], numbers[ind])
-        }
+    @Test
+    fun `given numbers when call function then update incoming array`() {
+        val resultSize = removeDuplicates(numbersTest)
+
+        assertArrayEquals(expectedNumbers, numbersTest.copyOfRange(0, resultSize))
     }
 
     companion object {
@@ -39,11 +34,11 @@ class RemoveDuplicatesFromSortedArrayKtTest(
             name = "Given numbers {0} when call function then final numbers {1} with size {2}"
         )
         fun data() = listOf(
-            arrayOf(listOf(0,0,1,1,1,2,2,3,3,4), listOf(0, 1, 2, 3, 4), 5),
-            arrayOf(listOf(1,1,2), listOf(1,2), 2),
-            arrayOf(listOf(1,2,3), listOf(1,2,3), 3),
-            arrayOf(listOf(1,1,1), listOf(1), 1),
-            arrayOf(emptyList<Int>(), emptyList<Int>(), 0),
+            arrayOf(intArrayOf(0,0,1,1,1,2,2,3,3,4), intArrayOf(0, 1, 2, 3, 4), 5),
+            arrayOf(intArrayOf(1,1,2), intArrayOf(1,2), 2),
+            arrayOf(intArrayOf(1,2,3), intArrayOf(1,2,3), 3),
+            arrayOf(intArrayOf(1,1,1), intArrayOf(1), 1),
+            arrayOf(intArrayOf(), intArrayOf(), 0),
         )
     }
 }
