@@ -1,6 +1,6 @@
 package algorithms.easy
 
-import java.util.Stack
+import java.util.*
 
 private val BRACKETS = mapOf(')' to '(', '}' to '{', ']' to '[')
 

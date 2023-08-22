@@ -20,7 +20,6 @@ class MajorityElementKtTest(
     }
 
     companion object {
-
         @JvmStatic
         @Parameters(name = "given array {0} when call function then the majority alement is {1}")
         fun data() = listOf(

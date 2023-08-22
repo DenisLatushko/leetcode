@@ -1,13 +1,10 @@
 package algorithms.easy
 
+import algorithms.utils.TreeNode
+
 /**
  * Description: https://leetcode.com/problems/same-tree/
  */
-
-class TreeNode(var `val`: Int) {
-    var left: TreeNode? = null
-    var right: TreeNode? = null
-}
 
 fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean =
     when {
