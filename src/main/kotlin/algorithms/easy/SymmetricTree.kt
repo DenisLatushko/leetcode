@@ -2,6 +2,10 @@ package algorithms.easy
 
 import algorithms.utils.TreeNode
 
+/**
+ * Description: https://leetcode.com/problems/symmetric-tree/
+ */
+
 fun isSymmetric(root: TreeNode?): Boolean =
     if (root?.left == null && root?.right == null) {
         false
