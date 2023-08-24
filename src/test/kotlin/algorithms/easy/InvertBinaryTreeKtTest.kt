@@ -13,7 +13,7 @@ class InvertBinaryTreeKtTest (
 ) {
 
     @Test
-    fun `given tree when call max depth then max tree depth returned`() {
+    fun `given tree when invert then tree is mirrored`() {
         val actualResult = invertTree(tree)
 
         assertEquals(expectedResult, actualResult)

@@ -13,7 +13,7 @@ class SymmetricTreeKtTest(
 ) {
 
     @Test
-    fun `given tree when call max depth then max tree depth returned`() {
+    fun `given tree when call function then check is trees are symmetric`() {
         val actualResult = isSymmetric(tree)
 
         assertEquals(expectedResult, actualResult)
