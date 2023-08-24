@@ -1,6 +1,6 @@
 package algorithms.medium
 
-import java.util.*
+import java.util.Stack
 
 /**
  * Description: https://leetcode.com/problems/evaluate-reverse-polish-notation/
