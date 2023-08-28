@@ -1,10 +1,8 @@
 package algorithms.easy
 
-/** Description: https://leetcode.com/problems/merge-two-sorted-lists/ **/
+import algorithms.utils.ListNode
 
-data class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
+/** Description: https://leetcode.com/problems/merge-two-sorted-lists/ **/
 
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
     if (list1 == null) return list2

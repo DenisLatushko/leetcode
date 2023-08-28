@@ -1,14 +1,8 @@
 package algorithms.medium
 
+import algorithms.utils.ListNode
+
 /** Description: https://leetcode.com/problems/add-two-numbers/ **/
-
-data class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-
-    override fun toString(): String {
-        return `val`.toString() + " " + next?.toString()
-    }
-}
 
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode {
     return when {

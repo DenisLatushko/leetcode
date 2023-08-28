@@ -1,9 +1,11 @@
 package algorithms.easy
 
+import algorithms.utils.ListNode
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import org.junit.runners.Parameterized.Parameters
 
 @RunWith(Parameterized::class)
 class MergeTwoSortedListsKtTest(
@@ -17,9 +19,7 @@ class MergeTwoSortedListsKtTest(
         assertEquals(expectedList, mergeTwoLists(list1, list2))
     }
 
-
     companion object {
-
         private val list1 = listOf(-1, 0, 2, 5, 7,9)
         private val list2 = listOf(0, 1, 2, 3, 7, 10)
         private val list3 = (list1 + list2).sorted()
@@ -45,7 +45,7 @@ class MergeTwoSortedListsKtTest(
         }
 
         @JvmStatic
-        @Parameterized.Parameters(
+        @Parameters(
             name = "Given nodes {0} and {1} when call function then result list is {2}"
         )
         fun data() = listOf(
