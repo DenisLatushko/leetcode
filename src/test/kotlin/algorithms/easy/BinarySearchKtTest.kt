@@ -1,9 +1,10 @@
 package algorithms.easy
 
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
+import org.junit.runners.Parameterized.Parameters
 
 @RunWith(Parameterized::class)
 class BinarySearchKtTest(
@@ -24,7 +25,7 @@ class BinarySearchKtTest(
         private val array = intArrayOf(-1,0,3,5,9,12)
 
         @JvmStatic
-        @Parameterized.Parameters(
+        @Parameters(
             name = "Given sorted array {0} and target {1} when search called then index is {2}"
         )
         fun data() = listOf(
