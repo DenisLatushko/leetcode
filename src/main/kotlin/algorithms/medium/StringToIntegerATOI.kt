@@ -9,19 +9,30 @@ fun myAtoi(s: String): Int {
     var result = 0
     var sign = 1
 
-    s.forEach { char ->
-        if (char == '-' && result == 0) {
-            sign = -1
-        }
+    var numberInd = 0
+    while (numberInd < s.length && s[numberInd] == ' ') {
+        numberInd++
+    }
 
-        if (char.isDigit()) {
-            val number = char.digitToInt()
-            if ((result > maxDividedByTen) || (result == maxDividedByTen && number > maxTailByTen)) {
-                return if (sign == 1) Int.MAX_VALUE else Int.MIN_VALUE
+    if (numberInd < s.length) {
+        if (s[numberInd] == '-') sign = -1
+
+        val start = if (s[numberInd] == '-' || s[numberInd] == '+') numberInd + 1 else numberInd
+
+        (start..s.lastIndex).forEach {
+            val char = s[it]
+            if (char.isDigit()) {
+                val number = char.digitToInt()
+                if ((result > maxDividedByTen) || (result == maxDividedByTen && number > maxTailByTen)) {
+                    return if (sign == 1) Int.MAX_VALUE else Int.MIN_VALUE
+                } else {
+                    result = (result * 10) + number
+                }
             } else {
-                result = (result * 10) + number
+                return result * sign
             }
         }
     }
+
     return result * sign
 }

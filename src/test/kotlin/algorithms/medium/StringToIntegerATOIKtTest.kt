@@ -24,9 +24,12 @@ class StringToIntegerATOIKtTest(
         @Parameters(name = "Given string {0} when call function then result is {1}")
         fun data() = listOf(
             arrayOf("42", 42),
+            arrayOf("+-42", 0),
+            arrayOf("-+42", 0),
             arrayOf("   -42", -42),
             arrayOf("4193 with words", 4193),
             arrayOf("    4193 with words     ", 4193),
+            arrayOf("     with words 4193     ", 0),
             arrayOf("99999999999999999999999999999999999999999999999", Int.MAX_VALUE),
             arrayOf("-99999999999999999999999999999999999999999999999", Int.MIN_VALUE),
         )
