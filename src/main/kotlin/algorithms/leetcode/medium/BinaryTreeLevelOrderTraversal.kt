@@ -1,6 +1,6 @@
 package algorithms.leetcode.medium
 
-import algorithms.utils.TreeNode
+import algorithms.leetcode.utils.TreeNode
 
 /**
  * Description: https://leetcode.com/problems/binary-tree-level-order-traversal/

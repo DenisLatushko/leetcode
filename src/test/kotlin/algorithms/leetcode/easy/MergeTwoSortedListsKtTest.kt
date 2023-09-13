@@ -1,6 +1,6 @@
 package algorithms.leetcode.easy
 
-import algorithms.utils.ListNode
+import algorithms.leetcode.utils.ListNode
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith

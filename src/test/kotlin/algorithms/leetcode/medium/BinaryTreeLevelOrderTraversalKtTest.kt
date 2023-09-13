@@ -1,6 +1,6 @@
 package algorithms.leetcode.medium
 
-import algorithms.utils.TreeNode
+import algorithms.leetcode.utils.TreeNode
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized

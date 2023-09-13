@@ -1,6 +1,6 @@
 package algorithms.leetcode.medium
 
-import algorithms.utils.TreeNode
+import algorithms.leetcode.utils.TreeNode
 
 /**
  * Description: https://leetcode.com/problems/sum-root-to-leaf-numbers/

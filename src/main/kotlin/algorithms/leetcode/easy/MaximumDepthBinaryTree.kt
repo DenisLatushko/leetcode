@@ -1,6 +1,6 @@
 package algorithms.leetcode.easy
 
-import algorithms.utils.TreeNode
+import algorithms.leetcode.utils.TreeNode
 import kotlin.math.max
 
 /**
