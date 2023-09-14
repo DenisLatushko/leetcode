@@ -1,4 +1,4 @@
-package algorithms.leetcode.utils
+package algorithms.utils
 
 data class TreeNode(var `val`: Int = 0) {
     var left: TreeNode? = null

@@ -1,6 +1,6 @@
 package algorithms.leetcode.easy
 
-import algorithms.leetcode.utils.ListNode
+import algorithms.utils.ListNode
 
 /**
  * Description: https://leetcode.com/problems/linked-list-cycle

@@ -1,5 +1,7 @@
 package algorithms.leetcode.utils
 
+import algorithms.utils.ListNode
+
 /**
  * Convert the [Int] number to a linked list of [ListNode] items.
  * The number is always non-negative (0 <= Node.val <= 9).

@@ -22,9 +22,7 @@ class SolutionTest(
 
     companion object {
         @JvmStatic
-        @Parameterized.Parameters(
-            name = "Given number of builds as {0} and the bad build number is {1}}"
-        )
+        @Parameterized.Parameters(name = "Given number of builds as {0} and the bad build number is {1}}")
         fun data() = listOf(
             arrayOf(1, 1),
             arrayOf(5, 4),

@@ -1,6 +1,6 @@
 package algorithms.leetcode.easy
 
-import algorithms.leetcode.utils.ListNode
+import algorithms.utils.ListNode
 import algorithms.leetcode.utils.toListNodes
 import org.junit.Test
 import org.junit.runner.RunWith

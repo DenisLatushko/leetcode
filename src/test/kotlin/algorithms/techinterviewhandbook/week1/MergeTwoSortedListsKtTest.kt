@@ -1,4 +1,4 @@
-package algorithms.leetcode.easy
+package algorithms.techinterviewhandbook.week1
 
 import algorithms.utils.ListNode
 import org.junit.Assert.assertEquals
@@ -23,6 +23,10 @@ class MergeTwoSortedListsKtTest(
         private val list1 = listOf(-1, 0, 2, 5, 7,9)
         private val list2 = listOf(0, 1, 2, 3, 7, 10)
         private val list3 = (list1 + list2).sorted()
+
+        private val list4 = listOf(1,2,4)
+        private val list5 = listOf(1,2,4)
+        private val list6 = (list4 + list5).sorted()
 
         private fun getNodeList(list: List<Int>?): ListNode? {
             if (list == null || list.isEmpty()) return null
@@ -50,6 +54,7 @@ class MergeTwoSortedListsKtTest(
         )
         fun data() = listOf(
             arrayOf(getNodeList(list1), getNodeList(list2), getNodeList(list3)),
+            arrayOf(getNodeList(list4), getNodeList(list5), getNodeList(list6)),
             arrayOf(null, getNodeList(list2), getNodeList(list2)),
             arrayOf(getNodeList(list1), null, getNodeList(list1)),
             arrayOf(getNodeList(emptyList()), getNodeList(emptyList()), null)

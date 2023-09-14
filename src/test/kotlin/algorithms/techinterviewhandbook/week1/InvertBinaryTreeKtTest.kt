@@ -1,4 +1,4 @@
-package algorithms.leetcode.easy
+package algorithms.techinterviewhandbook.week1
 
 import algorithms.utils.TreeNode
 import org.junit.Assert.assertEquals

@@ -27,12 +27,12 @@ class SearchInsertPositionKtTest(
             name = "Given array {0} and target is {1} when call search then return index {2}"
         )
         fun data() = listOf(
-//            arrayOf(array, 2, 0),
-//            arrayOf(array, 7, 3),
-//            arrayOf(array, 4, 1),
+            arrayOf(array, 2, 0),
+            arrayOf(array, 7, 3),
+            arrayOf(array, 4, 1),
             arrayOf(array, 3, 1),
-//            arrayOf(array, 8, 4),
-//            arrayOf(array, 1, 0),
+            arrayOf(array, 8, 4),
+            arrayOf(array, 1, 0),
         )
     }
 }

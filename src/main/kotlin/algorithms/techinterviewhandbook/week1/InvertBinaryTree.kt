@@ -1,16 +1,15 @@
-package algorithms.leetcode.easy
+package algorithms.techinterviewhandbook.week1
 
 import algorithms.utils.TreeNode
 
 /**
- * Description: https://leetcode.com/problems/invert-binary-tree
+ * https://leetcode.com/problems/invert-binary-tree/
  */
-
 fun invertTree(root: TreeNode?): TreeNode? {
     if (root != null) {
-        val temp = root.left
+        val temp = invertTree(root.left)
         root.left = invertTree(root.right)
-        root.right = invertTree(temp)
+        root.right = temp
     }
     return root
 }

@@ -1,6 +1,6 @@
 package algorithms.leetcode.medium
 
-import algorithms.leetcode.utils.ListNode
+import algorithms.utils.ListNode
 
 /** Description: https://leetcode.com/problems/add-two-numbers/ **/
 
