@@ -1,4 +1,4 @@
-package algorithms.leetcode.utils
+package algorithms.utils
 
 import org.junit.Assert
 

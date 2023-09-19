@@ -1,6 +1,6 @@
 package algorithms.techinterviewhandbook.week1
 
-import algorithms.leetcode.utils.assertArrayEquals
+import algorithms.utils.assertArrayEquals
 import junit.framework.TestCase
 import org.junit.Test
 import org.junit.runner.RunWith

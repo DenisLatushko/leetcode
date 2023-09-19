@@ -1,6 +1,4 @@
-package algorithms.leetcode.utils
-
-import algorithms.utils.ListNode
+package algorithms.utils
 
 /**
  * Convert the [Int] number to a linked list of [ListNode] items.
@@ -23,4 +21,18 @@ private fun separateStringToListNodes(str: String): ListNode {
     }
 
     return listHead
+}
+
+internal fun getCyclicList(indOfNode: Int?, listValues: Int): ListNode {
+    val root = listValues.toListNodes()
+    var cyclicNode: ListNode? = null
+    if (indOfNode != null) repeat((0 .. indOfNode).count()) { cyclicNode = root.next }
+
+    var lastNode: ListNode? = root
+    while (lastNode?.next != null) {
+        lastNode = lastNode.next
+    }
+
+    lastNode?.apply { next = cyclicNode }
+    return root
 }

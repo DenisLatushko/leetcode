@@ -1,6 +1,6 @@
 package algorithms.leetcode.medium
 
-import algorithms.leetcode.utils.assertArrayEquals
+import algorithms.utils.assertArrayEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized

@@ -1,7 +1,7 @@
 package algorithms.leetcode.easy
 
 import algorithms.utils.ListNode
-import algorithms.leetcode.utils.toListNodes
+import algorithms.utils.getCyclicList
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
@@ -31,20 +31,5 @@ class LinkedListCycleKtTest(
             arrayOf(getCyclicList(null, 3204), false),
             arrayOf(getCyclicList(null, 1), false),
         )
-
-        private fun getCyclicList(indOfNode: Int?, listValues: Int): ListNode {
-            val root = listValues.toListNodes()
-            var cyclicNode: ListNode? = null
-            repeat((0 .. (indOfNode ?: 0)).count()) { cyclicNode = root.next }
-
-            var lastNode: ListNode? = root
-            while (lastNode?.next != null) {
-                lastNode = root.next
-            }
-
-            lastNode?.apply { next = cyclicNode }
-            return root
-        }
-
     }
 }

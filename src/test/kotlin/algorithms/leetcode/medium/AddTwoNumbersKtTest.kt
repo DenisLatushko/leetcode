@@ -1,7 +1,7 @@
 package algorithms.leetcode.medium
 
 import algorithms.utils.ListNode
-import algorithms.leetcode.utils.toInvertedList
+import algorithms.utils.toInvertedList
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
