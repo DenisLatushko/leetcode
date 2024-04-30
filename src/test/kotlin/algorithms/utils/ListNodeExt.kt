@@ -8,6 +8,8 @@ internal fun Int.toInvertedList(): ListNode = separateStringToListNodes(this.toS
 
 internal fun Int.toListNodes(): ListNode = separateStringToListNodes(this.toString())
 
+internal fun String.toListNodes(): ListNode = separateStringToListNodes(this)
+
 private fun separateStringToListNodes(str: String): ListNode {
     val listHead = ListNode(str[0].digitToInt())
     var listNode = listHead
