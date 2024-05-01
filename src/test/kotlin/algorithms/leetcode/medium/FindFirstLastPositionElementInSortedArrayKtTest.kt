@@ -25,6 +25,8 @@ class FindFirstLastPositionElementInSortedArrayKtTest(
         fun data() = listOf(
             arrayOf(intArrayOf(5,7,7,8,8,10), 8, intArrayOf(3, 4)),
             arrayOf(intArrayOf(5,7,7,8,8,10), 6, intArrayOf(-1, -1)),
+            arrayOf(intArrayOf(1), 1, intArrayOf(0, 0)),
+            arrayOf(intArrayOf(2, 2), 3, intArrayOf(-1, -1)),
             arrayOf(intArrayOf(), 0, intArrayOf(-1, -1)),
         )
     }
